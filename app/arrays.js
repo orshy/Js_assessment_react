@@ -5,9 +5,7 @@ exports.arraysAnswers = {
   indexOf: (arr, item) => arr.indexOf(item)
   ,
 
-  sum: (arr) => {
-
-    return arr.reduce((prev, current) => prev + current)
+  sum: (arr) => arr.reduce((prev, current) => prev + current)
 
     // let sum = 0;
 
@@ -15,11 +13,10 @@ exports.arraysAnswers = {
     //   sum += arr[i];
     // }
     // return sum;
-  },
+  ,
 
-  remove: (arr, item) => {
-    // ES6
-    return arr.filter(ret => item !== ret)
+  remove: (arr, item) => arr.filter(ret => item !== ret)
+  ,
 
     // ES5
     // let ret = [];
@@ -31,7 +28,6 @@ exports.arraysAnswers = {
     // }
     //
     // return ret;
-  },
 
   removeWithoutCopy: function(arr, item) {
     var i;
@@ -47,36 +43,34 @@ exports.arraysAnswers = {
     return arr;
   },
 
-  append: (arr, item) => {
-    arr.push(item);
-    return arr;
+  append(arr, item) {
+    return arr.concat(item);
   },
 
-  truncate: (arr) => {
+  truncate(arr) {
     arr.pop();
     return arr;
   },
 
-  prepend: (arr, item) => {
+  prepend(arr, item) {
     arr.unshift(item);
     return arr;
   },
 
-  curtail: (arr) => {
+  curtail(arr) {
     arr.shift(arr);
     return arr;
   },
 
-  concat: (arr1, arr2) => {
-    return arr1.concat(arr2);
+  concat(arr1, arr2) { return arr1.concat(arr2);
   },
 
-  insert: (arr, item, index) => {
+  insert(arr, item, index) {
     arr.splice(index, 0, item);
     return arr;
   },
 
-  count: (arr, item) => {
+  count(arr, item) {
     let count = 0;
 
     for (let i = 0; i < arr.length; i++) {
@@ -87,12 +81,12 @@ exports.arraysAnswers = {
     return count;
   },
 
-  duplicates: function(arr) {
-    var result = [...new Set(arr)];
+  duplicates(arr) {
+    let result = [...new Set(arr)];
       return result;
   },
 
-  square: (arr) => {
+  square(arr) {
     let final = [];
 
     for (let i = 0; i < arr.length; i++) {
@@ -101,7 +95,7 @@ exports.arraysAnswers = {
     return final;
   },
 
-  findAllOccurrences: (arr, target) => {
+  findAllOccurrences(arr, target) {
     let final = [];
     for (let i = 0; i < arr.length; i++) {
       if (arr[i] === target) {
