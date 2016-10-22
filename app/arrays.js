@@ -8,7 +8,6 @@ exports.arraysAnswers = {
   sum: (arr) => arr.reduce((prev, current) => prev + current)
 
     // let sum = 0;
-
     // for (i = 0; i < arr.length; i++) {
     //   sum += arr[i];
     // }
@@ -17,10 +16,8 @@ exports.arraysAnswers = {
 
   remove: (arr, item) => arr.filter(ret => item !== ret)
   ,
-
     // ES5
     // let ret = [];
-
     // for (let i = 0; i < arr.length; i++) {
     //   if (arr[i] !== item) {
     //     ret.push(arr[i]);
@@ -29,7 +26,7 @@ exports.arraysAnswers = {
     //
     // return ret;
 
-  removeWithoutCopy: function(arr, item) {
+  removeWithoutCopy(arr, item) {
     var i;
     var len;
 
@@ -94,6 +91,19 @@ exports.arraysAnswers = {
     }
     return final;
   },
+
+  remove: (arr, item) => arr.filter(ret => item !== ret)
+  ,
+    // ES5
+    // let ret = [];
+
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i] !== item) {
+    //     ret.push(arr[i]);
+    //   }
+    // }
+    //
+    // return ret;
 
   findAllOccurrences(arr, target) {
     let final = [];
